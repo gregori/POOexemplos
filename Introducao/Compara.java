@@ -19,22 +19,28 @@ public class Compara
         System.out.print("Entre o segundo número: ");
         numero2 = entrada.nextInt(); // lê o número fornecido pelo usuário
 
-        if (numero1 == numero2)
+        if (numero1 == numero2) {
             System.out.printf("%d == %d\n", numero1, numero2);
+        }
 
-        if (numero1 != numero2)
+        if (numero1 != numero2) {
             System.out.printf("%d != %d\n", numero1, numero2);
-        
-        if (numero1 < numero2)
+        }
+            
+        if (numero1 < numero2) {
             System.out.printf("%d < %d\n", numero1, numero2);
-
-        if (numero1 > numero2)
+        }
+            
+        if (numero1 > numero2) {
             System.out.printf("%d > %d\n", numero1, numero2);
-
-        if (numero1 <= numero2)
+        }
+            
+        if (numero1 <= numero2) {
             System.out.printf("%d <= %d\n", numero1, numero2);
-
-        if (numero1 >= numero2)
+        }
+            
+        if (numero1 >= numero2) {
             System.out.printf("%d >= %d\n", numero1, numero2);
+        }
     } // fim do método main
 } // fim da classe Compara
