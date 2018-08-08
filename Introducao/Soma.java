@@ -12,7 +12,7 @@ public class Soma
         int numero1; // primeiro número a adicionar
         int numero2; // segundo número a adicionar
         int soma; // para armazenar a soma dos dois números
-
+        
         System.out.print("Entre o primeiro número: ");
         numero1 = entrada.nextInt(); // lê o número fornecido pelo usuário
 
@@ -20,7 +20,7 @@ public class Soma
         numero2 = entrada.nextInt(); // lê o número fornecido pelo usuário
 
         soma = numero1 + numero2;
-
+        
         System.out.printf("A soma %d + %d é %d\n", numero1, numero2, soma);
     } // fim do main
 } // fim da classe soma
