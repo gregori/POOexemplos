@@ -2,8 +2,6 @@
 // Cria e manipula um objeto de Conta
 import java.util.Scanner;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 public class TestaConta 
 {
     public static void main(String[] args) 
@@ -39,5 +37,10 @@ public class TestaConta
         System.out.printf("%nadicionando %.2f ao sando da conta2%n%n",
             quantiaDeposito);
         conta2.deposita(quantiaDeposito); // adiciona o saldo à conta1
+
+        System.out.printf("O saldo de %s é: $%.2f %n", 
+            conta1.getNome(), conta1.getSaldo());
+        System.out.printf("O saldo de %s é: $%.2f %n", 
+            conta2.getNome(), conta2.getSaldo());
     }
 }
