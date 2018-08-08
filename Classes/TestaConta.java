@@ -16,12 +16,12 @@ public class TestaConta
         System.out.printf("Nome inicial é: %s%n%n", minhaConta.getNome());
 
         // Solicita e lê o nome
-        System.out.println("Entre o nome: ");
+        System.out.print("Entre o nome: ");
         String nome = entrada.nextLine(); // lê uma linha de texto
         minhaConta.setNome(nome); // insere nome em minhaConta
         System.out.println(); // imprime uma linha em branco
 
         // exibe o nome armazenado em minhaConta
-        System.out.printf("O nome no objeto minhaConta é:%n%s%n", minhaConta.getNome());
+        System.out.printf("O nome no objeto minhaConta é: %s%n", minhaConta.getNome());
     }
 }
