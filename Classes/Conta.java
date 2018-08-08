@@ -5,11 +5,33 @@
 public class Conta
 {
     private String nome; // variável de instância
+    private double saldo; // variável de instância
 
-    // o construtor inicializa nome com o nome do parâmetro
-    public Conta(String nome) // nome do construtor é o nome da classe
+    // o construtor recebe dois parâmetros
+    public Conta(String nome, double saldo) // nome do construtor é o nome da classe
     {
         this.nome = nome;
+
+        // valida que saldo é maior que 0.0; se não for
+        // a variável de instância mantém seu valor inicial padrão
+        // que é 0.0
+        if (saldo > 0.0) { // se o saldo for válido
+            this.saldo = saldo; // atribui o valor da variável
+        }
+    }
+
+    // método que deposita apenas uma quantia válida no saldo
+    public void deposita(double quantiaDeposito)
+    {
+        if (quantiaDeposito > 0.0) { // se quantiaDeposito válido
+            saldo = saldo + quantiaDeposito; // adiciona ao saldo
+        }
+    }
+
+    // método para retornar o saldo da conta
+    public double getSaldo()
+    {
+        return saldo;
     }
 
     // método para definir o nome do objeto
