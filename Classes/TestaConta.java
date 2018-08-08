@@ -9,19 +9,14 @@ public class TestaConta
         // Cria um objeto Scanner para obter dados do usuário
         Scanner entrada = new Scanner(System.in);
         
-        // cria um objeto Conta e atribui a minhaConta
-        Conta minhaConta = new Conta();
+        // cria dois objetos de Conta
+        Conta conta1 = new Conta("João da Silva");
+        Conta conta2 = new Conta("Maria de Souza");
 
-        // exibe o valor inicial do nome (null)
-        System.out.printf("Nome inicial é: %s%n%n", minhaConta.getNome());
+        // exibe o valor inicial do nome para cada conta
+        System.out.printf("O nome da conta1 é: %s%n%n", conta1.getNome());
+        System.out.printf("O nome da conta2 é: %s%n%n", cont21.getNome());
 
-        // Solicita e lê o nome
-        System.out.print("Entre o nome: ");
-        String nome = entrada.nextLine(); // lê uma linha de texto
-        minhaConta.setNome(nome); // insere nome em minhaConta
-        System.out.println(); // imprime uma linha em branco
-
-        // exibe o nome armazenado em minhaConta
-        System.out.printf("O nome no objeto minhaConta é: %s%n", minhaConta.getNome());
+        
     }
 }
