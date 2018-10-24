@@ -56,5 +56,4 @@ public class TestaConta
         System.out.printf("O saldo de %s é: $%.2f %n", 
             conta2.getNome(), conta2.getSaldo());
     }
-    
 }
