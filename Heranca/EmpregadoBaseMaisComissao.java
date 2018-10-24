@@ -1,19 +1,21 @@
-public class EmpregadoComissao extends Object
+public class EmpregadoBaseMaisComissao 
 {
     private String nome;
     private String sobrenome;
     private String cpf;
     private double vendasBrutas;
     private double taxaDeComissao;
+    private double salarioBase;
 
-    public EmpregadoComissao(String nome, String sobrenome, String cpf,
-                double vendasBrutas, double taxaDeComissao) 
+    public EmpregadoBaseMaisComissao(String nome, String sobrenome, String cpf,
+                double vendasBrutas, double taxaDeComissao, double salarioBase) 
     {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         setVendasBrutas(vendasBrutas);
-        setTaxaDeComissao(taxaDeComissao); 
+        setTaxaDeComissao(taxaDeComissao);
+        this.salarioBase = salarioBase;  
     }
 
     /**
@@ -97,19 +99,39 @@ public class EmpregadoComissao extends Object
     }
 
     /**
+     * @param salarioBase the salarioBase to set
+     */
+    public void setSalarioBase(double salarioBase) {
+        if (salarioBase >= 0.0)
+            this.salarioBase = salarioBase;
+        else
+            throw new IllegalArgumentException(
+                "Salário deve ser >= 0.0"
+            );
+    }
+
+    /**
+     * @return the salarioBase
+     */
+    public double getSalarioBase() {
+        return salarioBase;
+    }
+
+    /**
      * @return O rendimento do funcionario
      */
     public double rendimentos() {
-        return taxaDeComissao * vendasBrutas;
+        return salarioBase + taxaDeComissao * vendasBrutas;
     }
 
     // retorna a representação em String do objeto
     @Override // indica que esse objeto sobrescreve o método da superclasse
     public String toString() {
-        return String.format("%s: %s %s\n%s: %s\n%s: %.2f\n%s: %.2f", 
+        return String.format("%s: %s %s\n%s: %s\n%s: %.2f\n%s: %.2f\n%s: %.2f", 
             "Empregado de Comissão", nome, sobrenome,
             "CPF", cpf,
             "Vendas Brutas", vendasBrutas,
-            "Taxa de Comissão", taxaDeComissao);
+            "Taxa de Comissão", taxaDeComissao,
+            "Salario Base", salarioBase);
     }
 }

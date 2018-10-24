@@ -2,6 +2,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TesteEmpregadoBaseMaisComissao",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "TesteEmpregadoBaseMaisComissao",
+            "args": ""
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TesteEmpregadoComissao",
             "request": "launch",
             "cwd": "${workspaceFolder}",
