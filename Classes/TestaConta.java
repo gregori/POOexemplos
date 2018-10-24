@@ -2,8 +2,6 @@
 // Cria e manipula um objeto de Conta
 import java.util.Scanner;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 public class TestaConta 
 {
     public static void main(String[] args) 
@@ -24,7 +22,7 @@ public class TestaConta
         // prompt
         System.out.print("Entre quantia de depósito para conta1: "); 
         double quantiaDeposito = entrada.nextDouble(); // obtém entrada do usuário
-        System.out.printf("%nadicionando %.2f ao sando da conta1%n%n",
+        System.out.printf("%nadicionando %.2f ao saldo da conta1%n%n",
             quantiaDeposito);
         conta1.deposita(quantiaDeposito); // adiciona o saldo à conta1
 
@@ -36,8 +34,27 @@ public class TestaConta
 
         System.out.print("Entre quantia de depósito para conta2: "); 
         quantiaDeposito = entrada.nextDouble(); // obtém entrada do usuário
-        System.out.printf("%nadicionando %.2f ao sando da conta2%n%n",
+        System.out.printf("%nadicionando %.2f ao saldo da conta2%n%n",
             quantiaDeposito);
-        conta2.deposita(quantiaDeposito); // adiciona o saldo à conta1
+        conta2.deposita(quantiaDeposito); // adiciona o saldo à conta2
+
+        // exibe os saldos
+        System.out.printf("O saldo de %s é: $%.2f %n", 
+            conta1.getNome(), conta1.getSaldo());
+        System.out.printf("O saldo de %s é: $%.2f %n", 
+            conta2.getNome(), conta2.getSaldo());
+
+        System.out.print("Entre quantia de saque para conta1: "); 
+        double quantiaSaque = entrada.nextDouble(); // obtém entrada do usuário
+        System.out.printf("%nsacando %.2f da conta1%n%n",
+            quantiaSaque);
+        conta1.saca(quantiaSaque); // saca da conta1
+
+        // exibe os saldos
+        System.out.printf("O saldo de %s é: $%.2f %n", 
+            conta1.getNome(), conta1.getSaldo());
+        System.out.printf("O saldo de %s é: $%.2f %n", 
+            conta2.getNome(), conta2.getSaldo());
     }
+    
 }

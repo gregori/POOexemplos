@@ -28,6 +28,15 @@ public class Conta
         }
     }
 
+    public void saca(double quantiaSaque)
+    {
+        if (quantiaSaque > saldo) {
+            System.out.println("Valor do débito excedeu o saldo da conta.");
+        } else {
+            saldo = saldo - quantiaSaque;
+        }
+    }
+
     // método para retornar o saldo da conta
     public double getSaldo()
     {
