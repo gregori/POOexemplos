@@ -1,61 +1,15 @@
-public class EmpregadoComissao extends Object
+public class EmpregadoComissao extends Empregado
 {
-    private String nome;
-    private String sobrenome;
-    private String cpf;
     private double vendasBrutas;
     private double taxaDeComissao;
 
     public EmpregadoComissao(String nome, String sobrenome, String cpf,
                 double vendasBrutas, double taxaDeComissao) 
     {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.cpf = cpf;
+        super(nome, sobrenome, cpf);
+
         setVendasBrutas(vendasBrutas);
         setTaxaDeComissao(taxaDeComissao); 
-    }
-
-    /**
-     * @param nome the nome to set
-     */
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    /**
-     * @return the nome
-     */
-    public String getNome() {
-        return nome;
-    }
-
-    /**
-     * @param sobrenome the sobrenome to set
-     */
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
-    /**
-     * @return the sobrenome
-     */
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    /**
-     * @param cpf the cpf to set
-     */
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    /**
-     * @return the cpf
-     */
-    public String getCpf() {
-        return cpf;
     }
 
     /**
@@ -106,9 +60,8 @@ public class EmpregadoComissao extends Object
     // retorna a representação em String do objeto
     @Override // indica que esse objeto sobrescreve o método da superclasse
     public String toString() {
-        return String.format("%s: %s %s\n%s: %s\n%s: %.2f\n%s: %.2f", 
-            "Comissionado", getNome(), getSobrenome(),
-            "CPF", getCpf(),
+        return String.format("%s %s\n%s: %.2f\n%s: %.2f", 
+            "Comissionado", super.toString(),
             "Vendas Brutas", getVendasBrutas(),
             "Taxa de Comissão", getTaxaDeComissao());
     }
