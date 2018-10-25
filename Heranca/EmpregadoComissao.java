@@ -100,16 +100,16 @@ public class EmpregadoComissao extends Object
      * @return O rendimento do funcionario
      */
     public double rendimentos() {
-        return taxaDeComissao * vendasBrutas;
+        return getTaxaDeComissao() * getVendasBrutas();
     }
 
     // retorna a representação em String do objeto
     @Override // indica que esse objeto sobrescreve o método da superclasse
     public String toString() {
         return String.format("%s: %s %s\n%s: %s\n%s: %.2f\n%s: %.2f", 
-            "Empregado de Comissão", nome, sobrenome,
-            "CPF", cpf,
-            "Vendas Brutas", vendasBrutas,
-            "Taxa de Comissão", taxaDeComissao);
+            "Comissionado", getNome(), getSobrenome(),
+            "CPF", getCpf(),
+            "Vendas Brutas", getVendasBrutas(),
+            "Taxa de Comissão", getTaxaDeComissao());
     }
 }
