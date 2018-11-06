@@ -2,6 +2,36 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TestaMenu",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "TestaMenu",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PainelTeste",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "PainelTeste",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GridLayoutTeste",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "GridLayoutTeste",
+            "args": ""
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ComboBoxTest",
             "request": "launch",
             "cwd": "${workspaceFolder}",
